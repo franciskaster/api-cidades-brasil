@@ -397,6 +397,73 @@
             </div>
         </div>
 
+        <div class="api-section" style="background: #ffffff; padding: 30px; margin-bottom: 40px; border: 1px solid #e0e0e0; border-radius: 15px;">
+            <h3>API Gratuita e Livre</h3>
+            <p style="text-align: center; margin-bottom: 20px; color: #666;">
+                Acesse os dados via API REST sem custos ou limitações
+            </p>
+            
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <h4 style="margin-bottom: 15px; color: #333;">Endpoint da API</h4>
+                <code style="background: #e9ecef; padding: 10px 15px; border-radius: 5px; font-size: 1.1rem; color: #333; display: block; text-align: center; margin-bottom: 15px;">
+                    https://api.kstrtech.com.br/cidades/{sigla_estado}
+                </code>
+                <p style="color: #666; text-align: center; margin-bottom: 0;">
+                    Substitua <code>{sigla_estado}</code> pela sigla do estado desejado (ex: sp, rj, mg)
+                </p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 15px; color: #333;">Características da API</h4>
+                <p style="color: #666; margin-bottom: 10px;">100% Gratuita • Livre para uso • Dados oficiais IBGE • Sempre atualizada • Resposta rápida • CORS habilitado</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin-bottom: 15px; color: #333;">Exemplos de Uso</h4>
+                
+                <div style="margin-bottom: 20px;">
+                    <h5 style="margin-bottom: 10px; color: #333;">JavaScript</h5>
+                    <pre style="background: #2d3748; color: #e2e8f0; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.9rem;"><code>// Buscar cidades de São Paulo
+fetch('https://api.kstrtech.com.br/cidades/sp')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// Buscar cidades do Rio de Janeiro
+fetch('https://api.kstrtech.com.br/cidades/rj')
+  .then(response => response.json())
+  .then(data => console.log(data));</code></pre>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h5 style="margin-bottom: 10px; color: #333;">Python</h5>
+                    <pre style="background: #2d3748; color: #e2e8f0; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.9rem;"><code>import requests
+
+# Buscar cidades de São Paulo
+response = requests.get('https://api.kstrtech.com.br/cidades/sp')
+cidades_sp = response.json()
+print(cidades_sp)
+
+# Buscar cidades do Rio de Janeiro
+response = requests.get('https://api.kstrtech.com.br/cidades/rj')
+cidades_rj = response.json()
+print(cidades_rj)</code></pre>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h5 style="margin-bottom: 10px; color: #333;">cURL</h5>
+                    <pre style="background: #2d3748; color: #e2e8f0; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.9rem;"><code># Buscar cidades de São Paulo
+curl https://api.kstrtech.com.br/cidades/sp
+
+# Buscar cidades do Rio de Janeiro
+curl https://api.kstrtech.com.br/cidades/rj
+
+# Buscar cidades de Minas Gerais
+curl https://api.kstrtech.com.br/cidades/mg</code></pre>
+                </div>
+            </div>
+
+        </div>
+
         <div class="footer">
             <p>📊 Dados atualizados em 17/10/2025 | Fonte: IBGE</p>
         </div>
@@ -597,6 +664,7 @@
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
         }
+
 
         // Inicializar quando a página carregar
         document.addEventListener('DOMContentLoaded', carregarDados);

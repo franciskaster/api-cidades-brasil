@@ -138,11 +138,92 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - Caso encontre discrepâncias, abra uma [issue](https://github.com/seu-usuario/estado-cidades-brasil/issues)
 - Para uso comercial, verifique as políticas do IBGE
 
-## 📞 Contato
+## 🌐 API Gratuita
 
-- **GitHub**: [@seu-usuario](https://github.com/seu-usuario)
-- **Email**: seu-email@exemplo.com
-- **Issues**: [Reportar problemas](https://github.com/seu-usuario/estado-cidades-brasil/issues)
+Este projeto também oferece uma **API REST gratuita e livre** para acessar os dados de municípios brasileiros:
+
+### Endpoint da API
+```
+https://api.kstrtech.com.br/cidades/{sigla_estado}
+```
+
+### Como usar a API
+
+#### Exemplo: Buscar cidades de São Paulo
+```bash
+curl https://api.kstrtech.com.br/cidades/sp
+```
+
+#### Exemplo: Buscar cidades do Rio de Janeiro
+```bash
+curl https://api.kstrtech.com.br/cidades/rj
+```
+
+#### Exemplo em JavaScript
+```javascript
+// Buscar cidades de São Paulo
+fetch('https://api.kstrtech.com.br/cidades/sp')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// Buscar cidades do Rio de Janeiro
+fetch('https://api.kstrtech.com.br/cidades/rj')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
+
+#### Exemplo em Python
+```python
+import requests
+
+# Buscar cidades de São Paulo
+response = requests.get('https://api.kstrtech.com.br/cidades/sp')
+cidades_sp = response.json()
+print(cidades_sp)
+
+# Buscar cidades do Rio de Janeiro
+response = requests.get('https://api.kstrtech.com.br/cidades/rj')
+cidades_rj = response.json()
+print(cidades_rj)
+```
+
+### Características da API
+- ✅ **100% Gratuita** - Sem custos ou limitações
+- ✅ **Livre para uso** - Comercial e não comercial
+- ✅ **Dados oficiais** - Fonte IBGE
+- ✅ **Atualizada** - Dados sempre em dia
+- ✅ **Rápida** - Resposta em milissegundos
+- ✅ **CORS habilitado** - Para uso em frontend
+
+### Estados disponíveis
+A API suporta todas as 27 unidades federativas do Brasil (26 estados + DF):
+- `ac` - Acre
+- `al` - Alagoas
+- `ap` - Amapá
+- `am` - Amazonas
+- `ba` - Bahia
+- `ce` - Ceará
+- `df` - Distrito Federal
+- `es` - Espírito Santo
+- `go` - Goiás
+- `ma` - Maranhão
+- `mt` - Mato Grosso
+- `ms` - Mato Grosso do Sul
+- `mg` - Minas Gerais
+- `pa` - Pará
+- `pb` - Paraíba
+- `pr` - Paraná
+- `pe` - Pernambuco
+- `pi` - Piauí
+- `rj` - Rio de Janeiro
+- `rn` - Rio Grande do Norte
+- `rs` - Rio Grande do Sul
+- `ro` - Rondônia
+- `rr` - Roraima
+- `sc` - Santa Catarina
+- `sp` - São Paulo
+- `se` - Sergipe
+- `to` - Tocantins
 
 ---
 
