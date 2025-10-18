@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados e Municípios do Brasil 2025 - Dados Oficiais IBGE | Lista Completa</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Lista completa e atualizada de todos os 5.570 municípios brasileiros organizados por estado. Dados oficiais do IBGE com download em JSON, CSV e XML. Busca interativa e estatísticas.">
+    <meta name="keywords" content="municípios brasil, estados brasil, cidades brasil, IBGE, dados oficiais, lista municípios, geografia brasil, divisão territorial, download dados">
+    <meta name="author" content="Franciskaster">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://franciskaster.github.io/estado-cidades-brasil/">
+    <meta property="og:title" content="Estados e Municípios do Brasil 2025 - Dados Oficiais IBGE">
+    <meta property="og:description" content="Lista completa de todos os 5.570 municípios brasileiros com dados oficiais do IBGE. Busca interativa, estatísticas e download em múltiplos formatos.">
+    <meta property="og:image" content="https://franciskaster.github.io/estado-cidades-brasil/og-image.jpg">
+    <meta property="og:site_name" content="Estados e Municípios do Brasil">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://franciskaster.github.io/estado-cidades-brasil/">
+    <meta property="twitter:title" content="Estados e Municípios do Brasil 2025 - Dados Oficiais IBGE">
+    <meta property="twitter:description" content="Lista completa de todos os 5.570 municípios brasileiros com dados oficiais do IBGE. Busca interativa, estatísticas e download em múltiplos formatos.">
+    <meta property="twitter:image" content="https://franciskaster.github.io/estado-cidades-brasil/og-image.jpg">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="application-name" content="Estados e Municípios do Brasil">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://franciskaster.github.io/estado-cidades-brasil/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Estados e Municípios do Brasil",
+        "description": "Lista completa e atualizada de todos os 5.570 municípios brasileiros organizados por estado com dados oficiais do IBGE",
+        "url": "https://franciskaster.github.io/estado-cidades-brasil/",
+        "applicationCategory": "ReferenceApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Franciskaster"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Franciskaster",
+            "url": "https://github.com/franciskaster"
+        },
+        "dateModified": "2025-01-17",
+        "inLanguage": "pt-BR",
+        "isAccessibleForFree": true
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .github-fork-ribbon {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 0 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .github-fork-ribbon:hover {
+            background: #333;
+            color: white;
+            text-decoration: none;
+        }
+
+        .header {
+            text-align: center;
+            background: #ffffff;
+            padding: 60px 30px 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: #333;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .search-section {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            min-width: 200px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .search-select {
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            background: white;
+            min-width: 150px;
+        }
+
+        .search-button {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background: #555;
+        }
+
+        .results {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+        }
+
+        .results h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .municipios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+        }
+
+        .municipio-item {
+            padding: 12px 15px;
+            background: #ffffff;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        .municipio-item:hover {
+            background: #f8f9fa;
+        }
+
+        .download-section {
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .download-btn {
+            padding: 15px 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-width: 120px;
+            background: #ffffff;
+            color: #333;
+        }
+
+        .download-btn:hover {
+            background: #f8f9fa;
+            border-color: #333;
+        }
+
+
+        .footer {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .municipios-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://github.com/franciskaster/avatar-creator" target="_blank" class="github-fork-ribbon" aria-label="Fork me on GitHub">
+        <span class="github-fork-ribbon-text">🚀 Fork me on GitHub</span>
+    </a>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🇧🇷 Estados e Municípios do Brasil</h1>
+            <p>Dados oficiais do IBGE - Instituto Brasileiro de Geografia e Estatística</p>
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalEstados">-</div>
+                <div class="stat-label">Estados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalMunicipios">-</div>
+                <div class="stat-label">Municípios</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="maiorEstado">-</div>
+                <div class="stat-label">Maior Estado</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="menorEstado">-</div>
+                <div class="stat-label">Menor Estado</div>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <h3>🔍 Buscar Municípios</h3>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Digite o nome do município...">
+                <select id="estadoSelect" class="search-select">
+                    <option value="">Todos os estados</option>
+                </select>
+                <button onclick="buscarMunicipios()" class="search-button">Buscar</button>
+            </div>
+            <div id="searchResults"></div>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h3>📋 Resultados</h3>
+            <div id="municipiosList" class="municipios-grid"></div>
+            
+            <div id="filteredDownload" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+                <h4>⬇️ Download dos Resultados Filtrados</h4>
+                <p style="color: #666; margin-bottom: 15px;">Baixe apenas os municípios encontrados na sua busca</p>
+                <div class="download-buttons">
+                    <button onclick="downloadFilteredJSON()" class="download-btn json" id="filteredJsonBtn">📄 JSON</button>
+                    <button onclick="downloadFilteredCSV()" class="download-btn csv" id="filteredCsvBtn">📊 CSV</button>
+                    <button onclick="downloadFilteredXML()" class="download-btn xml" id="filteredXmlBtn">📋 XML</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h3>⬇️ Download Completo dos Dados</h3>
+            <p style="text-align: center; margin-bottom: 20px; color: #666;">
+                Baixe todos os 5.570 municípios brasileiros em diferentes formatos
+            </p>
+            <div class="download-buttons">
+                <button onclick="downloadJSON()" class="download-btn json">📄 JSON Completo</button>
+                <button onclick="downloadCSV()" class="download-btn csv">📊 CSV Completo</button>
+                <button onclick="downloadXML()" class="download-btn xml">📋 XML Completo</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📊 Dados atualizados em 17/10/2025 | Fonte: IBGE</p>
+        </div>
+    </div>
+
+    <script>
+        let municipiosData = {};
+        let municipiosFiltrados = [];
+
+        // Carregar dados
+        async function carregarDados() {
+            try {
+                const response = await fetch('municipios.json');
+                municipiosData = await response.json();
+                inicializarInterface();
+                calcularEstatisticas();
+            } catch (error) {
+                document.getElementById('stats').innerHTML = 
+                    '<div class="error">Erro ao carregar os dados. Verifique se o arquivo municipios.json está disponível.</div>';
+            }
+        }
+
+        function inicializarInterface() {
+            // Preencher select de estados
+            const estadoSelect = document.getElementById('estadoSelect');
+            Object.keys(municipiosData).sort().forEach(estado => {
+                const option = document.createElement('option');
+                option.value = estado;
+                option.textContent = estado;
+                estadoSelect.appendChild(option);
+            });
+
+            // Buscar ao pressionar Enter
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    buscarMunicipios();
+                }
+            });
+        }
+
+        function calcularEstatisticas() {
+            const estados = Object.keys(municipiosData);
+            const totalMunicipios = Object.values(municipiosData).reduce((total, municipios) => total + municipios.length, 0);
+            
+            // Encontrar estado com mais e menos municípios
+            let maiorEstado = '';
+            let menorEstado = '';
+            let maxMunicipios = 0;
+            let minMunicipios = Infinity;
+
+            estados.forEach(estado => {
+                const count = municipiosData[estado].length;
+                if (count > maxMunicipios) {
+                    maxMunicipios = count;
+                    maiorEstado = estado;
+                }
+                if (count < minMunicipios) {
+                    minMunicipios = count;
+                    menorEstado = estado;
+                }
+            });
+
+            document.getElementById('totalEstados').textContent = estados.length;
+            document.getElementById('totalMunicipios').textContent = totalMunicipios.toLocaleString();
+            document.getElementById('maiorEstado').textContent = maiorEstado;
+            document.getElementById('menorEstado').textContent = menorEstado;
+        }
+
+        function buscarMunicipios() {
+            const termo = document.getElementById('searchInput').value.toLowerCase().trim();
+            const estadoSelecionado = document.getElementById('estadoSelect').value;
+            
+            municipiosFiltrados = [];
+            
+            Object.entries(municipiosData).forEach(([estado, municipios]) => {
+                if (estadoSelecionado && estado !== estadoSelecionado) return;
+                
+                municipios.forEach(municipio => {
+                    if (!termo || municipio.toLowerCase().includes(termo)) {
+                        municipiosFiltrados.push({ estado, municipio });
+                    }
+                });
+            });
+
+            exibirResultados();
+        }
+
+        function exibirResultados() {
+            const resultsDiv = document.getElementById('results');
+            const municipiosList = document.getElementById('municipiosList');
+            const filteredDownload = document.getElementById('filteredDownload');
+            const filteredJsonBtn = document.getElementById('filteredJsonBtn');
+            const filteredCsvBtn = document.getElementById('filteredCsvBtn');
+            const filteredXmlBtn = document.getElementById('filteredXmlBtn');
+            
+            if (municipiosFiltrados.length === 0) {
+                municipiosList.innerHTML = '<p style="text-align: center; color: #666;">Nenhum município encontrado.</p>';
+                filteredDownload.style.display = 'none';
+            } else {
+                municipiosList.innerHTML = municipiosFiltrados
+                    .sort((a, b) => a.municipio.localeCompare(b.municipio))
+                    .map(item => `
+                        <div class="municipio-item">
+                            <strong>${item.municipio}</strong><br>
+                            <small style="color: #666;">${item.estado}</small>
+                        </div>
+                    `).join('');
+                
+                // Mostrar seção de download filtrado
+                filteredDownload.style.display = 'block';
+                filteredJsonBtn.textContent = `📄 JSON (${municipiosFiltrados.length})`;
+                filteredCsvBtn.textContent = `📊 CSV (${municipiosFiltrados.length})`;
+                filteredXmlBtn.textContent = `📋 XML (${municipiosFiltrados.length})`;
+            }
+            
+            resultsDiv.style.display = 'block';
+        }
+
+        // Funções para download completo
+        function downloadJSON() {
+            const dataStr = JSON.stringify(municipiosData, null, 2);
+            downloadFile(dataStr, 'municipios-brasil-completo.json', 'application/json');
+        }
+
+        function downloadCSV() {
+            let csv = 'Estado,Municipio\n';
+            Object.entries(municipiosData).forEach(([estado, municipios]) => {
+                municipios.forEach(municipio => {
+                    csv += `"${estado}","${municipio}"\n`;
+                });
+            });
+            downloadFile(csv, 'municipios-brasil-completo.csv', 'text/csv');
+        }
+
+        function downloadXML() {
+            let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<municipios>\n';
+            Object.entries(municipiosData).forEach(([estado, municipios]) => {
+                xml += `  <estado nome="${estado}">\n`;
+                municipios.forEach(municipio => {
+                    xml += `    <municipio>${municipio}</municipio>\n`;
+                });
+                xml += '  </estado>\n';
+            });
+            xml += '</municipios>';
+            downloadFile(xml, 'municipios-brasil-completo.xml', 'application/xml');
+        }
+
+        // Funções para download filtrado
+        function downloadFilteredJSON() {
+            const dataToDownload = {};
+            municipiosFiltrados.forEach(item => {
+                if (!dataToDownload[item.estado]) {
+                    dataToDownload[item.estado] = [];
+                }
+                dataToDownload[item.estado].push(item.municipio);
+            });
+            const dataStr = JSON.stringify(dataToDownload, null, 2);
+            downloadFile(dataStr, `municipios-filtrados-${municipiosFiltrados.length}.json`, 'application/json');
+        }
+
+        function downloadFilteredCSV() {
+            let csv = 'Estado,Municipio\n';
+            municipiosFiltrados.forEach(item => {
+                csv += `"${item.estado}","${item.municipio}"\n`;
+            });
+            downloadFile(csv, `municipios-filtrados-${municipiosFiltrados.length}.csv`, 'text/csv');
+        }
+
+        function downloadFilteredXML() {
+            const groupedData = {};
+            municipiosFiltrados.forEach(item => {
+                if (!groupedData[item.estado]) {
+                    groupedData[item.estado] = [];
+                }
+                groupedData[item.estado].push(item.municipio);
+            });
+            
+            let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<municipios>\n';
+            Object.entries(groupedData).forEach(([estado, municipios]) => {
+                xml += `  <estado nome="${estado}">\n`;
+                municipios.forEach(municipio => {
+                    xml += `    <municipio>${municipio}</municipio>\n`;
+                });
+                xml += '  </estado>\n';
+            });
+            xml += '</municipios>';
+            downloadFile(xml, `municipios-filtrados-${municipiosFiltrados.length}.xml`, 'application/xml');
+        }
+
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Inicializar quando a página carregar
+        document.addEventListener('DOMContentLoaded', carregarDados);
+    </script>
+</body>
+</html>
