@@ -1,4 +1,4 @@
-# 🇧🇷 API COM TODAS AS CIDADES DO BRASIL
+# 🇧🇷 API COM TODAS AS CIDADES DO BRASIL ATUALIZADO 2026
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.6+-blue.svg)](https://www.python.org/)
 [![Data Source](https://img.shields.io/badge/Data%20Source-IBGE-green.svg)](https://www.ibge.gov.br/)
